@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>PromosServlet</servlet-name>
+        <servlet-class>administrateur.web.PromosServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PromosServlet</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FormateurServlet</servlet-name>
+        <servlet-class>administrateur.web.FormateurServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FormateurServlet</servlet-name>
+        <url-pattern>*.fr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ApprenantsServlet</servlet-name>
+        <servlet-class>administrateur.web.ApprenantsServlete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApprenantsServlet</servlet-name>
+        <url-pattern>*.app</url-pattern>
+    </servlet-mapping>
+
+</web-app>
