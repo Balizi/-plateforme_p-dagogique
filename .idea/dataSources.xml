@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="simplonline@localhost" uuid="cafa3aab-7058-4e5b-b5a7-222ff8884f8d">
+    <data-source source="LOCAL" name="default/Hibernate" uuid="2e6c74e4-ef90-481a-aa56-879278d69d91">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+D:/JEE/1Brief/5_Simplonline_Clone_FullS/Simplonline_Clone/src/main/resources/META-INF/persistence.xml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/simplonline</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>

@@ -1,7 +1,6 @@
 package administrateur.dao;
 
-import administrateur.entity.Formateurs;
-import administrateur.entity.Promos;
+import entity.Apprenants;
 
 import java.util.ArrayList;
 
@@ -41,10 +40,26 @@ public class test {
         //System.out.println(formateurs.toString());
 
         //JPAStreamer.of("default").stream(Promos.class).forEach(System.out::println);
-        FormateurDaoImpl formateurDao = new FormateurDaoImpl();
+        /*FormateurDaoImpl formateurDao = new FormateurDaoImpl();
         ArrayList<Formateurs> formateurs = formateurDao.getAllFormateure();
         for (Formateurs f :formateurs ) {
             System.out.println(f.getNom());
+        }*/
+
+       /* ApprenantsDaoImpl apprenantsDao = new ApprenantsDaoImpl();
+        Apprenants apprenants = new Apprenants();
+        apprenants.setNom("Blz");
+        apprenants.setPrenom("Med");
+        apprenants.setEmail("med@gmail.com");
+        apprenants.setPassword("123");
+        System.out.println(apprenants.toString());
+        apprenantsDao.saveApprenants(apprenants);*/
+
+        ApprenantsDaoImpl apprenantsDao = new ApprenantsDaoImpl();
+        ArrayList<Apprenants> apprenants = apprenantsDao.getAllApprenant();
+        for (Apprenants a:apprenants ) {
+            System.out.println(a.toString());
         }
+
     }
 }

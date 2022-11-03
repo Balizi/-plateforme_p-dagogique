@@ -1,4 +1,4 @@
-package administrateur.entity;
+package entity;
 
 import javax.persistence.*;
 

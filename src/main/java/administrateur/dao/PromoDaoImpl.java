@@ -1,6 +1,6 @@
 package administrateur.dao;
 
-import administrateur.entity.Promos;
+import entity.Promos;
 import config.Config;
 
 import javax.persistence.*;

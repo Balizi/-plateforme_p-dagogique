@@ -5,16 +5,16 @@
              version="2.2">
     <persistence-unit name="default">
 
-        <class>administrateur.entity.Promos</class>
-        <class>administrateur.entity.Formateurs</class>
+        <class>entity.Promos</class>
+        <class>entity.Formateurs</class>
         <class>entity.Formateurs</class>
         <class>entity.Promos</class>
-        <class>administrateur.entity.Admin</class>
-        <class>administrateur.entity.Apprenants</class>
-        <class>administrateur.entity.Briefs</class>
-        <class>administrateur.entity.Formateurs</class>
-        <class>administrateur.entity.Promos</class>
-        <class>administrateur.entity.Rendu</class>
+        <class>entity.Admin</class>
+        <class>entity.Apprenants</class>
+        <class>entity.Briefs</class>
+        <class>entity.Formateurs</class>
+        <class>entity.Promos</class>
+        <class>entity.Rendu</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/simplonline"/>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>

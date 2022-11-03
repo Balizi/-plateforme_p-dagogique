@@ -1,6 +1,6 @@
 package administrateur.dao;
 
-import administrateur.entity.Formateurs;
+import entity.Formateurs;
 
 import java.util.ArrayList;
 

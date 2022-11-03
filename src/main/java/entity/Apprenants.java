@@ -1,9 +1,9 @@
-package administrateur.entity;
+package entity;
 
 import javax.persistence.*;
 
 @Entity
-public class Formateurs {
+public class Apprenants {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
@@ -20,9 +20,9 @@ public class Formateurs {
     @Basic
     @Column(name = "password")
     private String password;
-    @ManyToOne
-    @JoinColumn(name = "idpr", referencedColumnName = "id")
-    private Promos promosByIdpr;
+    @Basic
+    @Column(name = "idpr")
+    private Integer idpr;
 
     public int getId() {
         return id;
@@ -64,18 +64,27 @@ public class Formateurs {
         this.password = password;
     }
 
+    public Integer getIdpr() {
+        return idpr;
+    }
+
+    public void setIdpr(Integer idpr) {
+        this.idpr = idpr;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Formateurs that = (Formateurs) o;
+        Apprenants that = (Apprenants) o;
 
         if (id != that.id) return false;
         if (nom != null ? !nom.equals(that.nom) : that.nom != null) return false;
         if (prenom != null ? !prenom.equals(that.prenom) : that.prenom != null) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
+        if (idpr != null ? !idpr.equals(that.idpr) : that.idpr != null) return false;
 
         return true;
     }
@@ -87,26 +96,19 @@ public class Formateurs {
         result = 31 * result + (prenom != null ? prenom.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (idpr != null ? idpr.hashCode() : 0);
         return result;
-    }
-
-    public Promos getPromosByIdpr() {
-        return promosByIdpr;
-    }
-
-    public void setPromosByIdpr(Promos promosByIdpr) {
-        this.promosByIdpr = promosByIdpr;
     }
 
     @Override
     public String toString() {
-        return "Formateurs{" +
+        return "Apprenants{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", promosByIdpr=" + promosByIdpr +
+                ", idpr=" + idpr +
                 '}';
     }
 }

@@ -80,7 +80,7 @@
                         <option value="${p.id}">${p.nom}</option>
                     </c:forEach>
                 </select><br>
-                <button type="submit">Crée</button>
+                <button type="submit" >Crée</button>
             </form>
         </div>
     </div>
