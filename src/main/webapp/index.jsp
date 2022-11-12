@@ -31,6 +31,7 @@
             <select name="role">
                 <option value="admin">Administrateur</option>
                 <option value="formateur">Formateur</option>
+                <option value="apprenant">Apprenants</option>
             </select>
             <button type="submit">Se connecter</button>
             <input type="hidden" name="action" value="login"/>

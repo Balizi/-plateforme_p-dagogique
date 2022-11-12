@@ -1,6 +1,9 @@
 package administrateur.dao;
 
 import entity.Apprenants;
+import entity.Briefs;
+import entity.Promos;
+import formateurs.dao.IBriefsDaoImpl;
 
 import java.util.ArrayList;
 
@@ -55,11 +58,20 @@ public class test {
         System.out.println(apprenants.toString());
         apprenantsDao.saveApprenants(apprenants);*/
 
-        ApprenantsDaoImpl apprenantsDao = new ApprenantsDaoImpl();
+        /*ApprenantsDaoImpl apprenantsDao = new ApprenantsDaoImpl();
         ArrayList<Apprenants> apprenants = apprenantsDao.getAllApprenant();
         for (Apprenants a:apprenants ) {
             System.out.println(a.toString());
-        }
+        }*/
+
+        IBriefsDaoImpl iBriefsDao = new IBriefsDaoImpl();
+        Briefs briefs = new Briefs();
+        briefs.setNom("");
+        briefs.setDescription("");
+        Promos promos = new Promos();
+        briefs.setPromosByIdpr(promos);
+
+        iBriefsDao.saveBriefs(briefs);
 
     }
 }

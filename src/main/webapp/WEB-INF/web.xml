@@ -41,4 +41,22 @@
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AppServlete</servlet-name>
+        <servlet-class>formateurs.web.AppServlete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AppServlete</servlet-name>
+        <url-pattern>*.tech</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ApprServlete</servlet-name>
+        <servlet-class>apprenants.web.AppServlete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApprServlete</servlet-name>
+        <url-pattern>*.apr</url-pattern>
+    </servlet-mapping>
+
 </web-app>

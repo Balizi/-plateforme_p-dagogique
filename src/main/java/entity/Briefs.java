@@ -84,4 +84,15 @@ public class Briefs {
     public void setPromosByIdpr(Promos promosByIdpr) {
         this.promosByIdpr = promosByIdpr;
     }
+
+    @Override
+    public String toString() {
+        return "Briefs{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                ", promosByIdpr=" + promosByIdpr +
+                '}';
+    }
 }

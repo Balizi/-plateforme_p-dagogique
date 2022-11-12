@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>List Apprenant</title>
+    <title>List Apprenat</title>
     <link rel="stylesheet" href="administrateur/css/sidebare.css" />
     <link rel="stylesheet" href="administrateur/css/head.css" />
     <link rel="stylesheet" href="administrateur/css/listpromo.css"/>
@@ -14,48 +14,31 @@
     <div class="sidebar-brand">
         <h2><span class="lab la-accusoft"></span> <span>Holiday</span></h2>
     </div>
+
     <div class="sidebare-menu" id="sidebare-menu">
         <ul>
             <li>
-                <a href="#">
-                    <span class="las la-igloo"></span>
-                    <span>DashBoard</span>
-                </a>
-            </li>
-            <li>
-                <a href="/listPromo.do" >
+                <a href="/addApprenant.tech">
                     <span class="las la-clipboard-list"></span>
-                    <span>List promo</span>
+                    <span>Ajouter Apprenants</span>
                 </a>
             </li>
             <li>
-                <a href="/addPromo.do">
-                    <span class="las la-clipboard-list"></span>
-                    <span>Crée une promo</span>
-                </a>
-            </li>
-            <li>
-                <a href="/addFormateur.fr" >
-                    <span class="las la-clipboard-list"></span>
-                    <span>Crée compte formateur</span>
-                </a>
-            </li>
-            <li>
-                <a href="/listFormateur.fr">
-                    <span class="las la-clipboard-list"></span>
-                    <span>List formateur</span>
-                </a>
-            </li>
-            <li>
-                <a href="/addApprenant.app" >
-                    <span class="las la-clipboard-list"></span>
-                    <span>Crée compte apprenant</span>
-                </a>
-            </li>
-            <li>
-                <a href="/listApp.app" class="active">
+                <a href="/listApp.tech" class="active">
                     <span class="las la-clipboard-list"></span>
                     <span>List apprenant</span>
+                </a>
+            </li>
+            <li>
+                <a href="/AddBrife.tech">
+                    <span class="las la-clipboard-list"></span>
+                    <span>Ajouter Brief</span>
+                </a>
+            </li>
+            <li>
+                <a href="/listBrief.tech">
+                    <span class="las la-clipboard-list"></span>
+                    <span>List Brief</span>
                 </a>
             </li>
         </ul>
@@ -80,17 +63,15 @@
                                     <th>Nom</th>
                                     <th>Prenom</th>
                                     <th>Email</th>
-                                    <th>Password</th>
                                     <th width="10px">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach items="${listApprenants}" var="p">
+                                    <c:forEach items="${listApprenants}" var="ap">
                                         <tr>
-                                            <td data-label="Nom">${p.getNom()}</td>
-                                            <td data-label="Nom">${p.getPrenom()}</td>
-                                            <td data-label="Nom">${p.getEmail()}</td>
-                                            <td data-label="Nom">${p.getPassword()}</td>
+                                            <td data-label="Nom">${ap.nom}</td>
+                                            <td data-label="Nom">${ap.prenom}</td>
+                                            <td data-label="Nom">${ap.email}</td>
                                             <td>
                                                 <span class="action_btn">
                                                     <a href="#">Modifier</a>
@@ -112,5 +93,6 @@
         </div>
     </main>
 </div>
+
 </body>
 </html>
